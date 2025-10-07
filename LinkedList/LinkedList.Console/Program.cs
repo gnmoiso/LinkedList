@@ -42,14 +42,14 @@ do
         case "5":
             Console.WriteLine("Enter value to remove: ");
             var valueToRemove = Console.ReadLine();
-            if (valueToRemove == null)
+            if (valueToRemove == string.Empty)
             {
-                Console.WriteLine("Invalid value");
+                Console.WriteLine($"Invalid value {valueToRemove}");
                 break;
             }
-            else if (!list.Contains(valueToRemove))
+            else if (!list.Contains(valueToRemove!))
             {
-                Console.WriteLine("Value not found in the list");
+                Console.WriteLine($"The Value {valueToRemove} isn't found in the list");
                 break;
             }
 
